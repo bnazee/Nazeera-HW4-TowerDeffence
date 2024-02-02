@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
@@ -11,10 +10,11 @@ public abstract class Enemy : MonoBehaviour, IEnemy
 
     [SerializeField] private NavMeshAgent _agent;
     [SerializeField] private Transform _moveTarget;
-    [SerializeField] private Image _healthBar; 
+    [SerializeField] private Image _healthBar;
     [SerializeField] private float _health;
 
     private float _maxHealth;
+    private float initialSpeed;
 
     public float WaveCost { get; internal set; }
 
@@ -49,9 +49,26 @@ public abstract class Enemy : MonoBehaviour, IEnemy
         dir.z = 0;
         _healthBar.GetComponentInParent<Canvas>().transform.rotation = Quaternion.LookRotation(dir);
     }
+
+    public void SlowDown(float slowRate)
+    {
+        if (gameObject.activeSelf)
+        {
+            StartCoroutine(SlowingCoroutine(slowRate));
+        }
+    }
+
+    private IEnumerator SlowingCoroutine(float slowRate)
+    {
+        initialSpeed = _agent.speed;
+        _agent.speed = initialSpeed * slowRate;
+        yield return new WaitForSeconds(0.5f);
+        _agent.speed = initialSpeed;
+    }
 }
 
 public interface IEnemy
 {
     void TakeDamage(float dmg);
+    void SlowDown(float slowRate);
 }

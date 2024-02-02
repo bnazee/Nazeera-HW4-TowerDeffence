@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8fe3bba8ba6b11146a0dfc132d5ead95, type: 3}
-  m_Name: LaserTurret
+  m_Name: FreezeTurret
   m_EditorClassIdentifier: 
-  Prefab: {fileID: 4040586313542506100, guid: c1d1ad788985a3244a84182f8cd2fee3, type: 3}
-  Type: 1
+  Prefab: {fileID: 4040586313542506100, guid: d7865546f2e3f65428667254d47d06c5, type: 3}
+  Type: 2
   Cost: 1
   FireRange: 5
   RotationSpeed: 5
-  Damage: 10
+  Damage: 2
   FireRate: 0.2
   ShootForce: 0
   Bullet: {fileID: 0}

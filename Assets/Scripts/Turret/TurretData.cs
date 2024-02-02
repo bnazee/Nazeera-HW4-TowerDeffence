@@ -1,12 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+
+public enum TurretType
+    {
+        Simple,
+        Laser,
+        Freeze
+    }
 
 [CreateAssetMenu(fileName = "Turret", menuName = "Turrets/TurretData")]
 public class TurretData : ScriptableObject
 {
     public GameObject Prefab;
-    public string TurretName;
+    public TurretType Type;
     public float Cost;
     public float FireRange;
     public float RotationSpeed;
@@ -14,5 +19,4 @@ public class TurretData : ScriptableObject
     public float FireRate;
     public float ShootForce;
     public GameObject Bullet;
-    public Vector3 PlacePosition;
 }

@@ -326,7 +326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _controller: {fileID: 2038733350}
-  _turret: {fileID: 1385365793938707052, guid: ce5084564606ae64ba456aceaee6f724, type: 3}
+  _turretData: {fileID: 11400000, guid: a98fa26eb09455744bd281ebe8b41261, type: 2}
 --- !u!1 &210706793
 GameObject:
   m_ObjectHideFlags: 0
@@ -961,6 +961,7 @@ GameObject:
   - component: {fileID: 437943005}
   - component: {fileID: 437943004}
   - component: {fileID: 437943003}
+  - component: {fileID: 437943006}
   m_Layer: 5
   m_Name: FreezeTurretButton
   m_TagString: Untagged
@@ -1070,6 +1071,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 437943001}
   m_CullTransparentMesh: 1
+--- !u!114 &437943006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437943001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3283ad88832d5c54d92081ff0b86713a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _controller: {fileID: 2038733350}
+  _turretData: {fileID: 11400000, guid: 9c0072b76f496aa40971723ae2549261, type: 2}
 --- !u!1 &486580474
 GameObject:
   m_ObjectHideFlags: 0
@@ -1310,7 +1325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _controller: {fileID: 2038733350}
-  _turret: {fileID: 8007925765386564696, guid: c1d1ad788985a3244a84182f8cd2fee3, type: 3}
+  _turretData: {fileID: 11400000, guid: f974dd156201178429297c1fb9cc1963, type: 2}
 --- !u!1 &725559159
 GameObject:
   m_ObjectHideFlags: 0

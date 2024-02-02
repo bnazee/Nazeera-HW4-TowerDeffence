@@ -13,12 +13,11 @@ MonoBehaviour:
   m_Name: SimpleTurret
   m_EditorClassIdentifier: 
   Prefab: {fileID: 5668226184122989160, guid: ce5084564606ae64ba456aceaee6f724, type: 3}
-  TurretName: A
-  Cost: 10
+  Type: 0
+  Cost: 1
   FireRange: 3
   RotationSpeed: 2.5
   Damage: 10
   FireRate: 0.5
   ShootForce: 35
   Bullet: {fileID: 959818093462988821, guid: 93c19c29834a3e6419bdb5ae19e57fbc, type: 3}
-  PlacePosition: {x: -2, y: 0.55, z: -2.3}

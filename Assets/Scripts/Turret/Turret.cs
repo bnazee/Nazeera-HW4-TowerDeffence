@@ -1,17 +1,18 @@
+using System;
 using UnityEngine;
 
 public abstract class Turret : MonoBehaviour
 {
-    [SerializeField] protected TurretData _turretData;
     [SerializeField] protected Transform _shellOut;
     [SerializeField] protected Transform _pylon;
     [SerializeField] protected Transform _target;
-
+    
+    protected TurretData _turretData;
     protected float _lastShoot;
 
     public TurretData TurretData => _turretData;
 
-    protected void Update()
+    protected virtual void Update()
     {
         FindClosestTarget();
 
@@ -70,5 +71,9 @@ public abstract class Turret : MonoBehaviour
     }
 
     protected abstract void Shoot();
-   
+
+    public void Configure(TurretData data)
+    {
+        _turretData = data;
+    }
 }

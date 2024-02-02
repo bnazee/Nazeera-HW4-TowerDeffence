@@ -465,7 +465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3acee82dc5c038a49a06032eef3b1ab7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _turretData: {fileID: 11400000, guid: a98fa26eb09455744bd281ebe8b41261, type: 2}
+  _turretData: {fileID: 0}
   _shellOut: {fileID: 728654771589786870}
   _pylon: {fileID: 3614896068839167369}
   _target: {fileID: 0}
